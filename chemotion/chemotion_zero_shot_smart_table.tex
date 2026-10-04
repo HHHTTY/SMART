@@ -1,0 +1,52 @@
+\documentclass[10pt,border=6pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs,threeparttable}
+\usepackage{caption}
+
+\begin{document}
+\begin{threeparttable}
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.06}
+\footnotesize
+\begin{tabular}{l rrr rrr rrr}
+\toprule
+& \multicolumn{3}{c}{Multitasking}
+& \multicolumn{3}{c}{SMART}
+& \multicolumn{3}{c}{Delta (pp)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Modality
+& Top-1 $\uparrow$ & Top-5 $\uparrow$ & Top-10 $\uparrow$
+& Top-1 $\uparrow$ & Top-5 $\uparrow$ & Top-10 $\uparrow$
+& Top-1 & Top-5 & Top-10 \\
+\midrule
+${}^{1}$H-NMR & 0.150 & 0.201 & 0.301 & 2.356 & 4.411 & 5.714 & 2.206 & 4.210 & 5.413 \\
+${}^{13}$C-NMR & 3.609 & 6.366 & 8.020 & 4.110 & 7.419 & 9.323 & 0.501 & 1.053 & 1.303 \\
+MS & 0.251 & 0.451 & 0.602 & 1.704 & 3.459 & 4.261 & 1.453 & 3.008 & 3.659 \\
+IR & 0.050 & 0.251 & 0.301 & 1.855 & 3.860 & 5.564 & 1.805 & 3.609 & 5.263 \\
+\specialrule{1.1pt}{1pt}{1pt}
+${}^{1}$H-NMR + ${}^{13}$C-NMR & 0.201 & 0.401 & 0.652 & 4.060 & 7.419 & 8.672 & 3.859 & 7.018 & 8.020 \\
+${}^{1}$H-NMR + MS & 0.050 & 0.100 & 0.150 & 2.256 & 4.411 & 5.664 & 2.206 & 4.311 & 5.514 \\
+${}^{1}$H-NMR + IR & 0.050 & 0.150 & 0.150 & 2.406 & 4.662 & 5.564 & 2.356 & 4.512 & 5.414 \\
+${}^{13}$C-NMR + MS & 1.454 & 3.008 & 3.759 & 3.759 & 7.368 & 8.972 & 2.305 & 4.360 & 5.213 \\
+${}^{13}$C-NMR + IR & 1.404 & 3.158 & 3.910 & 3.910 & 7.419 & 9.273 & 2.506 & 4.261 & 5.363 \\
+MS + IR & 0.000 & 0.100 & 0.201 & 1.554 & 3.409 & 4.361 & 1.554 & 3.309 & 4.160 \\
+\specialrule{1.1pt}{1pt}{1pt}
+${}^{1}$H-NMR + ${}^{13}$C-NMR + MS & 0.150 & 0.351 & 0.501 & 4.511 & 7.018 & 8.271 & 4.361 & 6.667 & 7.770 \\
+${}^{1}$H-NMR + ${}^{13}$C-NMR + IR & 0.050 & 0.351 & 0.551 & 4.160 & 7.218 & 8.622 & 4.110 & 6.867 & 8.071 \\
+${}^{1}$H-NMR + MS + IR & 0.050 & 0.150 & 0.201 & 2.206 & 4.311 & 5.414 & 2.156 & 4.161 & 5.213 \\
+${}^{13}$C-NMR + MS + IR & 0.602 & 1.253 & 1.855 & 4.160 & 7.068 & 8.521 & 3.558 & 5.815 & 6.666 \\
+\specialrule{1.1pt}{1pt}{1pt}
+\shortstack[l]{${}^{1}$H-NMR + ${}^{13}$C-NMR\\+ MS + IR} & 0.100 & 0.201 & 0.351 & 4.361 & 7.368 & 8.571 & 4.261 & 7.167 & 8.220 \\
+\bottomrule
+\end{tabular}
+
+\captionof{table}{Multitasking and SMART top-$k$ performance on Chemotion v8 strict (n=1,995).}
+\label{tab:chemotion-zero-shot-smart}
+\begin{tablenotes}
+\footnotesize
+\item All entries are percentages from beam-10 evaluation. Formula is included in every input combination and omitted from the modality labels; Full includes all four spectral modalities. IR uses the 1,800-point representation, and MS inputs use a 916-token prefix limit.
+\item Delta is SMART minus Multitasking, in percentage points (pp); higher values favor SMART.
+\item SMART reports the final adapted checkpoint. The same 1,995 rows were used for unlabeled adaptation and scoring, so these values are transductive and are not an independent holdout estimate.
+\end{tablenotes}
+\end{threeparttable}
+\end{document}
