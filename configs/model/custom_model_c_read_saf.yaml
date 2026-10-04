@@ -1,0 +1,46 @@
+model_type: CustomModel
+model_name: facebook/bart-base
+d_model: 1024
+num_heads: 8
+encoder_attention_heads: 8
+decoder_attention_heads: 8
+encoder_layers: 6
+decoder_layers: 6
+encoder_ffn_dim: 2048
+decoder_ffn_dim: 2048
+multimodal_norm: true
+final_layer_norm: true
+positional_encoding_type: sin_cos
+gated_linear: true
+post_layer_normalisation: true
+
+optimiser: adamw
+lr: 1.0e-4
+lr_scheduler: exp
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+
+model_checkpoint_path: null
+batch_size: 8
+cv_split: 0
+guided_generation: false
+max_position_embeddings: 2048
+
+align_config: null
+multitask_retrieval_config: null
+generation_fusion_config:
+  d_model: 1024
+  variant: read_saf
+  dropout: 0.05
+  modality_map:
+    Formula: Formula
+    MSMS: MSMS
+    HNMR: HNMR
+    CNMR: CNMR
+    IR: IR
+  read_n_heads: 8
+n_beams: 1
+validation_n_beams: 1
+validation_guided_generation: false
+rejection_sampling: false

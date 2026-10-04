@@ -1,0 +1,88 @@
+# ExposureTTT is inserted after the modality embedding and before the
+# unchanged six-layer CustomModel encoder.
+model_type: CustomModel
+model_name: facebook/bart-base
+d_model: 512
+num_heads: 8
+encoder_attention_heads: 8
+decoder_attention_heads: 8
+encoder_layers: 6
+decoder_layers: 6
+encoder_ffn_dim: 2048
+decoder_ffn_dim: 2048
+multimodal_norm: true
+final_layer_norm: true
+positional_encoding_type: learned
+gated_linear: true
+post_layer_normalisation: true
+
+optimiser: adamw
+lr: 1.0e-3
+lr_scheduler: cyclic
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+
+model_checkpoint_path: null
+batch_size: 8
+cv_split: 0
+guided_generation: false
+max_position_embeddings: 2048
+
+align_config: null
+multitask_retrieval_config: null
+generation_fusion_config: null
+n_beams: 1
+validation_n_beams: 1
+validation_guided_generation: false
+rejection_sampling: false
+
+exposure_ttt_config:
+  enabled: true
+  # Stage B starts from the trained source backbone and learns only the
+  # ExposureTTT correction basis. Set to false for a joint-finetuning ablation.
+  freeze_backbone: true
+  unfreeze_encoder_layers: 0
+  inference_ttt_enabled: true
+  validation_compare: true
+  # Report No Block, Block NoUpdate, correct ExposureTTT, and shuffled
+  # exposure controls from the same validation batches.
+  validation_controls: true
+  meta_batch_fraction: 0.30
+  meta_schedule_period: 10
+  rank: 8
+  bound_ratio: 0.05
+  modalities: [HNMR, CNMR, MSMS, IR]
+  modality_map:
+    Formula: Formula
+    HNMR: HNMR
+    CNMR: CNMR
+    MSMS: MSMS
+    IR: IR
+  # The source meta-task sees several exposure levels.  Sampling is random
+  # over valid tokens (never a fixed first-k prefix), so the block cannot
+  # memorize a position-specific truncation rule.
+  q_ratios: [0.1, 0.25, 0.5, 0.75, 1.0]
+  # Evaluation follows q=0.25/0.5/0.75/1.0 with deterministic evenly spaced
+  # valid tokens, so validation curves are reproducible.
+  inference_q_ratios: [0.25, 0.5, 0.75, 1.0]
+  shift_augmentation:
+    enabled: true
+    # Conservative embedding-space proxy for source-to-target spectral shift.
+    scale_jitter: 0.02
+    noise_std: 0.01
+    token_dropout: 0.0
+    baseline_shift: 0.0
+  modality_step_scales:
+    HNMR: 1.0
+    CNMR: 0.25
+    MSMS: 1.0
+    IR: 1.0
+  adaptation_lr: 0.1
+  exposure_loss_weight: 1.0
+  drop_loss_weight: 0.5
+  trust_weight: 0.01
+  zero_loss_weight: 0.5
+  gain_loss_weight: 1.0
+  gain_margin: 0.0
+  create_graph: false

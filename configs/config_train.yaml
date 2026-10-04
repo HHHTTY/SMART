@@ -1,0 +1,68 @@
+# @package _global_
+
+# Define job name
+job_name: test
+
+# Working directory where everything is stored. Needs to be overriten depending on use
+working_dir: null
+
+# Data Arguments
+data_path: null
+preprocessor_path: null
+
+splitting: random
+cv_split: 0 
+
+finetuning: False
+molecules: True
+modality_dropout:
+num_cpu: 7
+dataloader:
+  persistent_workers: false
+  prefetch_factor: 2
+predict_class: null
+mixture: null 
+seed: 3247
+eval_ckpt: best
+eval_before_training: False
+eval_after_training: True
+
+trainer:
+  log_dir: ${working_dir}
+  task: ${job_name}
+  epochs: 100
+  acc_batches: 4
+  clip_grad: 1.0
+  limit_train_batches: null
+  limit_val_batches: 1.0
+  checkpoint_monitor: val_molecular_accuracy
+  val_check_interval: null
+  check_val_every_n_epoch: 1
+  early_stopping_patience: 10
+  early_stopping_delta: 0.001
+  save_checkpoints: every_5_epochs
+  early_stopping_len_set_sel: False
+  update_dataloaders: null
+  precision: null
+  deterministic: true
+  benchmark: false
+  matmul_precision: null
+  telemetry_every_n_batches: 20
+
+defaults:
+  - _self_
+  # Data/Embedding type can be selected
+  - data: ir/patches 
+
+  - augment: no_augment
+
+  - model:
+      - custom_hf_bart
+
+  - hydra: default
+
+  - debug: null
+
+  - mixture: null
+
+  - activeft: null

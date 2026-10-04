@@ -1,0 +1,344 @@
+{
+  "schema_version": "chemotion.raw_metadata_enrichment.v1",
+  "source_dataset": "Chemotion_final_ir1800_20260922_peakpicked_model_compatible_v8_densec03_strictdense_hcpeakpick_csolventclean",
+  "source_test_parquet": "/hpc2hdd/home/aimslab/ChengtangZhan/Dataset/chemotion_tokenized_datasets/Chemotion_final_ir1800_20260922_peakpicked_model_compatible_v8_densec03_strictdense_hcpeakpick_csolventclean/test.parquet",
+  "source_payload_root": "/hpc2hdd/home/aimslab/ChengtangZhan/Dataset/analysis_outputs/final/real/main_real_broad_v3_unified_payload_plus_numeric_suppressed_fid_v3_20260707/real/payload",
+  "join_keys": ["global_row_id", "chemotion_record_id", "inchikey", "chemotion_observation_ids"],
+  "rows": [
+    {
+      "global_row_id": 1,
+      "chemotion_record_id": "publication_Reaction_10068:sample_51531",
+      "inchikey": "QEPVMXNPUMUHDF-UHFFFAOYSA-N",
+      "source_subdataset": "reaction_zips",
+      "test_observation_ids": {
+        "h": "p0sup_91cb45fd68dd9a5eb9ed29244866bf87e9eddafc",
+        "c": "434dc55543f77759cbcd8cc5dd7b0dd008b708a4",
+        "ms": "c65aca33f3a3501a7e0eccf27aafe7190b3c3bf3"
+      },
+      "raw_package": {
+        "package_id": "publication_Reaction_10068",
+        "sample_id": "sample_51531",
+        "url": "https://www.chemotion-repository.net/zip/reactions/2020/11/publication_Reaction_10068.zip",
+        "local_path": "/Users/zhanchengtang/Documents/ttt/tmp/chemotion_raw_probe_20260922/publication_Reaction_10068.zip",
+        "metadata_paths": ["data/publication-metadata.json", "data/nmr-metadata.json", "data/ms-metadata.json"]
+      },
+      "modalities": {
+        "h": {
+          "payload_observation_id": "p0sup_91cb45fd68dd9a5eb9ed29244866bf87e9eddafc",
+          "dataset_id": "dataset_533751",
+          "analysis_id": "analysis_533750",
+          "dataset_doi": "https://doi.org/10.14272/QEPVMXNPUMUHDF-UHFFFAOYSA-N/CHMO0000593",
+          "nucleus": "1H",
+          "solvent": "CDCl3",
+          "observe_frequency_mhz": 500.133088507478,
+          "instrument": null,
+          "acquisition": {
+            "pulse_program": "zg30",
+            "scans": 16,
+            "spectral_width_hz": 10000,
+            "time_domain_points": 65536,
+            "receiver_gain": 49.29,
+            "temperature_k": 297.9998,
+            "date_epoch_seconds": 1565964285
+          },
+          "processing": {"offset_ppm": 16.08128, "size_points": 65536},
+          "metadata_source_paths": [
+            "data/sample_51531/analysis_533750/dataset_533751/40.zip!40/acqus",
+            "data/sample_51531/analysis_533750/dataset_533751/40.zip!40/pdata/1/procs",
+            "data/sample_51531/analysis_533750/dataset_533751/40.edit.jdx"
+          ]
+        },
+        "c": {
+          "payload_observation_id": "434dc55543f77759cbcd8cc5dd7b0dd008b708a4",
+          "dataset_id": "dataset_533753",
+          "analysis_id": "analysis_533752",
+          "dataset_doi": "https://doi.org/10.14272/QEPVMXNPUMUHDF-UHFFFAOYSA-N/CHMO0000595",
+          "nucleus": "13C",
+          "solvent": "CDCl3",
+          "observe_frequency_mhz": 125.770363712332,
+          "instrument": null,
+          "acquisition": {
+            "pulse_program": "zgpg30",
+            "scans": 1024,
+            "spectral_width_hz": 29761.9047619048,
+            "time_domain_points": 65536,
+            "receiver_gain": 197.51,
+            "temperature_k": 298.0016,
+            "date_epoch_seconds": 1565967615
+          },
+          "processing": {"offset_ppm": 218.3255, "size_points": 32768},
+          "metadata_source_paths": [
+            "data/sample_51531/analysis_533752/dataset_533753/41.zip!41/acqus",
+            "data/sample_51531/analysis_533752/dataset_533753/41.zip!41/pdata/1/procs",
+            "data/sample_51531/analysis_533752/dataset_533753/41.edit.jdx"
+          ]
+        },
+        "ms": {
+          "payload_observation_id": "c65aca33f3a3501a7e0eccf27aafe7190b3c3bf3",
+          "dataset_ids": ["dataset_533756", "dataset_533755"],
+          "selected_dataset_id_from_payload_path": "dataset_533755",
+          "analysis_id": "analysis_533754",
+          "dataset_doi": "https://doi.org/10.14272/QEPVMXNPUMUHDF-UHFFFAOYSA-N/CHMO0000470",
+          "spectrum_type": "msms",
+          "ms_level": 2,
+          "polarity": null,
+          "precursor_mz": null,
+          "adduct": null,
+          "collision_energy": null,
+          "instrument": null,
+          "metadata_source_paths": [
+            "data/sample_51531/analysis_533754/dataset_533755/sior89.infer.json",
+            "data/sample_51531/analysis_533754/dataset_533755/sior89.edit.jdx",
+            "data/ms-metadata.json"
+          ],
+          "note": "The selected infer-json observation is MS/MS in the integrated payload; acquisition conditions are not populated in the inspected metadata."
+        }
+      }
+    },
+    {
+      "global_row_id": 692,
+      "chemotion_record_id": "publication_Reaction_23081:sample_83258",
+      "inchikey": "SVZAUCYKJSRIBY-FCQUAONHSA-N",
+      "source_subdataset": "reaction_zips",
+      "test_observation_ids": {
+        "h": "p0sup_31950e27325ac275b8aa6e385fbb83b1ac4140b8",
+        "c": "p0sup_ca0eac6e68f04a3055b7592f63fc9ad03305e384",
+        "ms": "p0sup_28fd5ce31cbe3900d38c14f5cda81814e17133ef"
+      },
+      "raw_package": {
+        "package_id": "publication_Reaction_23081",
+        "sample_id": "sample_83258",
+        "url": "https://www.chemotion-repository.net/zip/reactions/2022/4/publication_Reaction_23081.zip",
+        "local_path": "/Users/zhanchengtang/Documents/ttt/tmp/chemotion_original_audit_20260923/publication_Reaction_23081.zip",
+        "metadata_paths": ["data/publication-metadata.json", "data/nmr-metadata.json", "data/ms-metadata.json"]
+      },
+      "modalities": {
+        "h": {
+          "payload_observation_id": "p0sup_31950e27325ac275b8aa6e385fbb83b1ac4140b8",
+          "dataset_id": "dataset_654644",
+          "analysis_id": "analysis_654643",
+          "dataset_doi": "https://doi.org/10.14272/SVZAUCYKJSRIBY-FCQUAONHSA-N/CHMO0000593",
+          "nucleus": "1H",
+          "solvent": "CDCl3",
+          "observe_frequency_mhz": 500.28308943379,
+          "instrument": null,
+          "acquisition": {
+            "pulse_program": "zg30",
+            "scans": 128,
+            "spectral_width_hz": 10000,
+            "time_domain_points": 65536,
+            "receiver_gain": 71.8,
+            "temperature_k": 295.1,
+            "date_epoch_seconds": 1617198729
+          },
+          "processing": {"offset_ppm": 16.16981, "size_points": 32768},
+          "metadata_source_paths": [
+            "data/sample_83258/analysis_654643/dataset_654644/NM_22-adamantanone-OTBS_10.zip!NM_22-ad-OTBS/10/acqus",
+            "data/sample_83258/analysis_654643/dataset_654644/NM_22-adamantanone-OTBS_10.zip!NM_22-ad-OTBS/10/pdata/1/procs",
+            "data/sample_83258/analysis_654643/dataset_654644/NM_22-adamantanone-OTBS_10.peak.jdx"
+          ]
+        },
+        "c": {
+          "payload_observation_id": "p0sup_ca0eac6e68f04a3055b7592f63fc9ad03305e384",
+          "dataset_id": "dataset_654646",
+          "analysis_id": "analysis_654645",
+          "dataset_doi": "https://doi.org/10.14272/SVZAUCYKJSRIBY-FCQUAONHSA-N/CHMO0000595",
+          "nucleus": "13C",
+          "solvent": "CDCl3",
+          "observe_frequency_mhz": 125.808085013908,
+          "instrument": null,
+          "acquisition": {
+            "pulse_program": "zgpg30",
+            "scans": 1024,
+            "spectral_width_hz": 29761.9047619048,
+            "time_domain_points": 65536,
+            "receiver_gain": 2050,
+            "temperature_k": 296.4,
+            "date_epoch_seconds": 1617202007
+          },
+          "processing": {"offset_ppm": 218.2901, "size_points": 32768},
+          "metadata_source_paths": [
+            "data/sample_83258/analysis_654645/dataset_654646/NM_22-adamantanone-OTBS_11.zip!NM_22-ad-OTBS/11/acqus",
+            "data/sample_83258/analysis_654645/dataset_654646/NM_22-adamantanone-OTBS_11.zip!NM_22-ad-OTBS/11/pdata/1/procs",
+            "data/sample_83258/analysis_654645/dataset_654646/NM_22-adamantanone-OTBS_11.peak.jdx"
+          ]
+        },
+        "ms": {
+          "payload_observation_id": "p0sup_28fd5ce31cbe3900d38c14f5cda81814e17133ef",
+          "dataset_id": "dataset_656815",
+          "analysis_id": "analysis_656814",
+          "dataset_doi": "https://doi.org/10.14272/SVZAUCYKJSRIBY-FCQUAONHSA-N/CHMO0000482",
+          "spectrum_type": "msms",
+          "ms_level": 2,
+          "polarity": null,
+          "precursor_mz": null,
+          "adduct": null,
+          "collision_energy": null,
+          "instrument": null,
+          "metadata_source_paths": [
+            "data/sample_83258/analysis_656814/dataset_656815/compound_4-ad-otbs.infer.json",
+            "data/sample_83258/analysis_656814/dataset_656815/compound_4-ad-otbs.edit.jdx",
+            "data/ms-metadata.json"
+          ],
+          "note": "The selected infer-json observation is MS/MS in the integrated payload; acquisition conditions are not populated in the inspected metadata."
+        }
+      }
+    }
+  ],
+  "observation_index": [
+    {
+      "chemotion_record_id": "publication_Reaction_10068:sample_51531",
+      "observation_id": "p0sup_91cb45fd68dd9a5eb9ed29244866bf87e9eddafc",
+      "global_row_id": 1,
+      "modality": "h",
+      "raw_package_id": "publication_Reaction_10068",
+      "sample_id": "sample_51531",
+      "package_url": "https://www.chemotion-repository.net/zip/reactions/2020/11/publication_Reaction_10068.zip",
+      "dataset_id": "dataset_533751",
+      "analysis_id": "analysis_533750",
+      "dataset_doi": "https://doi.org/10.14272/QEPVMXNPUMUHDF-UHFFFAOYSA-N/CHMO0000593",
+      "nucleus": "1H",
+      "solvent": "CDCl3",
+      "observe_frequency_mhz": 500.133088507478,
+      "instrument": null,
+      "acquisition": {"pulse_program": "zg30", "scans": 16, "spectral_width_hz": 10000, "time_domain_points": 65536, "receiver_gain": 49.29, "temperature_k": 297.9998},
+      "processing": {"offset_ppm": 16.08128, "size_points": 65536},
+      "metadata_source_paths": ["data/sample_51531/analysis_533750/dataset_533751/40.zip!40/acqus", "data/sample_51531/analysis_533750/dataset_533751/40.zip!40/pdata/1/procs"]
+    },
+    {
+      "chemotion_record_id": "publication_Reaction_10068:sample_51531",
+      "observation_id": "434dc55543f77759cbcd8cc5dd7b0dd008b708a4",
+      "global_row_id": 1,
+      "modality": "c",
+      "raw_package_id": "publication_Reaction_10068",
+      "sample_id": "sample_51531",
+      "package_url": "https://www.chemotion-repository.net/zip/reactions/2020/11/publication_Reaction_10068.zip",
+      "dataset_id": "dataset_533753",
+      "analysis_id": "analysis_533752",
+      "dataset_doi": "https://doi.org/10.14272/QEPVMXNPUMUHDF-UHFFFAOYSA-N/CHMO0000595",
+      "nucleus": "13C",
+      "solvent": "CDCl3",
+      "observe_frequency_mhz": 125.770363712332,
+      "instrument": null,
+      "acquisition": {"pulse_program": "zgpg30", "scans": 1024, "spectral_width_hz": 29761.9047619048, "time_domain_points": 65536, "receiver_gain": 197.51, "temperature_k": 298.0016},
+      "processing": {"offset_ppm": 218.3255, "size_points": 32768},
+      "metadata_source_paths": ["data/sample_51531/analysis_533752/dataset_533753/41.zip!41/acqus", "data/sample_51531/analysis_533752/dataset_533753/41.zip!41/pdata/1/procs"]
+    },
+    {
+      "chemotion_record_id": "publication_Reaction_10068:sample_51531",
+      "observation_id": "c65aca33f3a3501a7e0eccf27aafe7190b3c3bf3",
+      "global_row_id": 1,
+      "modality": "ms",
+      "raw_package_id": "publication_Reaction_10068",
+      "sample_id": "sample_51531",
+      "package_url": "https://www.chemotion-repository.net/zip/reactions/2020/11/publication_Reaction_10068.zip",
+      "dataset_id": "dataset_533755",
+      "analysis_id": "analysis_533754",
+      "dataset_doi": "https://doi.org/10.14272/QEPVMXNPUMUHDF-UHFFFAOYSA-N/CHMO0000470",
+      "spectrum_type": "msms",
+      "ms_level": 2,
+      "polarity": null,
+      "precursor_mz": null,
+      "adduct": null,
+      "collision_energy": null,
+      "instrument": null,
+      "metadata_source_paths": ["data/sample_51531/analysis_533754/dataset_533755/sior89.infer.json", "data/sample_51531/analysis_533754/dataset_533755/sior89.edit.jdx"]
+    },
+    {
+      "chemotion_record_id": "publication_Reaction_23081:sample_83258",
+      "observation_id": "p0sup_31950e27325ac275b8aa6e385fbb83b1ac4140b8",
+      "global_row_id": 692,
+      "modality": "h",
+      "raw_package_id": "publication_Reaction_23081",
+      "sample_id": "sample_83258",
+      "package_url": "https://www.chemotion-repository.net/zip/reactions/2022/4/publication_Reaction_23081.zip",
+      "dataset_id": "dataset_654644",
+      "analysis_id": "analysis_654643",
+      "dataset_doi": "https://doi.org/10.14272/SVZAUCYKJSRIBY-FCQUAONHSA-N/CHMO0000593",
+      "nucleus": "1H",
+      "solvent": "CDCl3",
+      "observe_frequency_mhz": 500.28308943379,
+      "instrument": null,
+      "acquisition": {"pulse_program": "zg30", "scans": 128, "spectral_width_hz": 10000, "time_domain_points": 65536, "receiver_gain": 71.8, "temperature_k": 295.1},
+      "processing": {"offset_ppm": 16.16981, "size_points": 32768},
+      "metadata_source_paths": ["data/sample_83258/analysis_654643/dataset_654644/NM_22-adamantanone-OTBS_10.zip!NM_22-ad-OTBS/10/acqus", "data/sample_83258/analysis_654643/dataset_654644/NM_22-adamantanone-OTBS_10.zip!NM_22-ad-OTBS/10/pdata/1/procs"]
+    },
+    {
+      "chemotion_record_id": "publication_Reaction_23081:sample_83258",
+      "observation_id": "p0sup_ca0eac6e68f04a3055b7592f63fc9ad03305e384",
+      "global_row_id": 692,
+      "modality": "c",
+      "raw_package_id": "publication_Reaction_23081",
+      "sample_id": "sample_83258",
+      "package_url": "https://www.chemotion-repository.net/zip/reactions/2022/4/publication_Reaction_23081.zip",
+      "dataset_id": "dataset_654646",
+      "analysis_id": "analysis_654645",
+      "dataset_doi": "https://doi.org/10.14272/SVZAUCYKJSRIBY-FCQUAONHSA-N/CHMO0000595",
+      "nucleus": "13C",
+      "solvent": "CDCl3",
+      "observe_frequency_mhz": 125.808085013908,
+      "instrument": null,
+      "acquisition": {"pulse_program": "zgpg30", "scans": 1024, "spectral_width_hz": 29761.9047619048, "time_domain_points": 65536, "receiver_gain": 2050, "temperature_k": 296.4},
+      "processing": {"offset_ppm": 218.2901, "size_points": 32768},
+      "metadata_source_paths": ["data/sample_83258/analysis_654645/dataset_654646/NM_22-adamantanone-OTBS_11.zip!NM_22-ad-OTBS/11/acqus", "data/sample_83258/analysis_654645/dataset_654646/NM_22-adamantanone-OTBS_11.zip!NM_22-ad-OTBS/11/pdata/1/procs"]
+    },
+    {
+      "chemotion_record_id": "publication_Reaction_23081:sample_83258",
+      "observation_id": "p0sup_28fd5ce31cbe3900d38c14f5cda81814e17133ef",
+      "global_row_id": 692,
+      "modality": "ms",
+      "raw_package_id": "publication_Reaction_23081",
+      "sample_id": "sample_83258",
+      "package_url": "https://www.chemotion-repository.net/zip/reactions/2022/4/publication_Reaction_23081.zip",
+      "dataset_id": "dataset_656815",
+      "analysis_id": "analysis_656814",
+      "dataset_doi": "https://doi.org/10.14272/SVZAUCYKJSRIBY-FCQUAONHSA-N/CHMO0000482",
+      "spectrum_type": "msms",
+      "ms_level": 2,
+      "polarity": null,
+      "precursor_mz": null,
+      "adduct": null,
+      "collision_energy": null,
+      "instrument": null,
+      "metadata_source_paths": ["data/sample_83258/analysis_656814/dataset_656815/compound_4-ad-otbs.infer.json", "data/sample_83258/analysis_656814/dataset_656815/compound_4-ad-otbs.edit.jdx"]
+    }
+  ],
+  "unmatched_reference_packages": [
+    {
+      "package_id": "publication_Sample_2698",
+      "sample_id_in_package": "sample_1971",
+      "url": "https://www.chemotion-repository.net/zip/samples/2014/10/publication_Sample_2698.zip",
+      "local_path": "/Users/zhanchengtang/Documents/ttt/tmp/chemotion_raw_probe_20260922/publication_Sample_2698.zip",
+      "inchikey": "CHXSUHPBNKDSEJ-LURJTMIESA-N",
+      "formula": "C11H10IN3O3",
+      "matched_test_rows": 0,
+      "matched_legacy_payload_observations": 0,
+      "modalities": {
+        "h": {
+          "dataset_id": "dataset_17453",
+          "analysis_id": "analysis_5800",
+          "dataset_doi": "https://doi.org/10.14272/CHXSUHPBNKDSEJ-LURJTMIESA-N/NMR/1H/CDCl3/400.1",
+          "nucleus": "1H",
+          "solvent": "CHLOROFORM-d",
+          "observe_frequency_mhz": 400.13,
+          "instrument": null,
+          "acquisition": {"acquisition_time_seconds": 3.95837, "zero_fill": 0, "sweep_width_hz": 8278.14551},
+          "metadata_source_paths": ["data/sample_1971/analysis_5800/dataset_17453/Oct15-2014.010.001.1r.jdx"]
+        },
+        "c": {
+          "dataset_id": "dataset_17452",
+          "analysis_id": "analysis_5799",
+          "dataset_doi": "https://doi.org/10.14272/CHXSUHPBNKDSEJ-LURJTMIESA-N/NMR/13C/CDCl3/100.1",
+          "nucleus": "13C",
+          "solvent": "CHLOROFORM-d",
+          "observe_frequency_mhz": 100.61277,
+          "instrument": null,
+          "acquisition": {"acquisition_time_seconds": 1.36643, "zero_fill": 0, "sweep_width_hz": 23980.81445},
+          "metadata_source_paths": ["data/sample_1971/analysis_5799/dataset_17452/Oct15-2014.011.001.1r.jdx"]
+        },
+        "ms": null
+      },
+      "note": "No test row or legacy H/C/MS payload observation matched this InChIKey; retained only as an unmatched metadata reference, not joined into the test payload."
+    }
+  ]
+}

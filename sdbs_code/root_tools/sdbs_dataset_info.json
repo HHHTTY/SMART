@@ -1,0 +1,10 @@
+{
+  "sdbs_test32": {
+    "file_name": "test32.jsonl",
+    "columns": {
+      "prompt": "prompt",
+      "response": "response",
+      "system": "system"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+model_type: CustomModel
+model_name: facebook/bart-base
+d_model: 512
+num_heads: 8
+encoder_attention_heads: 8
+decoder_attention_heads: 8
+encoder_layers: 6
+decoder_layers: 6
+encoder_ffn_dim: 2048
+decoder_ffn_dim: 2048
+multimodal_norm: true
+final_layer_norm: true
+positional_encoding_type: learned
+gated_linear: true
+post_layer_normalisation: true
+
+optimiser: adamw
+lr: 1e-3
+lr_scheduler: constant
+weight_decay: 0.0
+adam_beta1: 0.9
+adam_beta2: 0.999
+
+model_checkpoint_path: null
+batch_size: 8
+cv_split: 0
+guided_generation: false
+max_position_embeddings: 2048
+
+align_config: null
+multitask_retrieval_config: null
+generation_fusion_config: null
+n_beams: 10
+validation_n_beams: 10
+validation_guided_generation: false
+rejection_sampling: false
+
+tahcd_config:
+  enabled: false
+  inference_ttt_enabled: false
+
+spectral_repair_config:
+  enabled: true
+  inference_tta_enabled: true
+  apply_no_update: true
+  update_steps: 1
+  adaptation_lr: 0.5
+  rank: 32
+  relation_dim: 32
+  fast_dim: 8
+  gate_hidden: 64
+  min_gate: 0.05
+  max_fast_scale: 0.05
+  max_calibration_ratio: 0.10
+  mask_stride: 4
+  maskpred_weight: 1.0
+  slack_weight: 1.0
+  trust_weight: 0.01
+  freeze_backbone: true
+  modalities: [HNMR, MSMS, IR]
+  anchor_modalities: [Formula, CNMR]
+  modality_map:
+    Formula: Formula
+    HNMR: HNMR
+    CNMR: CNMR
+    MSMS: MSMS
+    IR: IR
+  unit_structure:
+    HNMR:
+      special_ids: [0, 1, 2, 3]
+      prefix_ids: [10]
+      delimiter_ids: [4]
+      delimiter_terminated: true
+    MSMS:
+      special_ids: [0, 1, 2, 3]
+      header_ids: [5, 6, 7, 8, 9, 10]
+      record_width: 2

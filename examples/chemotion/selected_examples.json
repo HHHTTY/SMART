@@ -1,0 +1,96 @@
+{
+  "G01": [
+    {
+      "source_row_index": 325,
+      "display_id": "#0326",
+      "formula": "C10H8BrNO2",
+      "target_smiles": "O=C1c2ccccc2C(=O)N1CCBr",
+      "teacher_smiles": "CCCN1C(=O)c2ccc(Br)cc2C1=O",
+      "teacher_formula": "C11H10BrNO2"
+    },
+    {
+      "source_row_index": 2988,
+      "display_id": "#2989",
+      "formula": "C8H9NO4S",
+      "target_smiles": "COC(=O)c1ccccc1S(N)(=O)=O",
+      "teacher_smiles": "COC(=O)CNS(=O)(=O)c1ccccc1",
+      "teacher_formula": "C9H11NO4S"
+    },
+    {
+      "source_row_index": 3089,
+      "display_id": "#3090",
+      "formula": "C12H9NS",
+      "target_smiles": "c1ccc2c(c1)Nc1ccccc1S2",
+      "teacher_smiles": "c1csc(-n2ccc3ccccc32)c1",
+      "teacher_formula": "C12H9NS"
+    },
+    {
+      "source_row_index": 2622,
+      "display_id": "#2623",
+      "formula": "C12H15NO",
+      "target_smiles": "O=C1CCN(Cc2ccccc2)CC1",
+      "teacher_smiles": "OC1(C2CC2)CNCc2ccccc21",
+      "teacher_formula": "C12H15NO"
+    },
+    {
+      "source_row_index": 487,
+      "display_id": "#0488",
+      "formula": "C12H19NO",
+      "target_smiles": "CCCCCCOc1ccc(N)cc1",
+      "teacher_smiles": "CCCCCOc1ccc(N)cc1",
+      "teacher_formula": "C11H17NO"
+    }
+  ],
+  "G02": [
+    {
+      "source_row_index": 151,
+      "display_id": "#0152",
+      "formula": "C7H4ClNO",
+      "target_smiles": "Clc1nc2ccccc2o1",
+      "teacher_smiles": "Clc1cc2ccoc2cn1",
+      "teacher_formula": "C7H4ClNO"
+    },
+    {
+      "source_row_index": 2357,
+      "display_id": "#2358",
+      "formula": "C11H8N2O",
+      "target_smiles": "O=C(c1ccccn1)c1ccccn1",
+      "teacher_smiles": "O=Cc1cccnc1-c1ccncc1",
+      "teacher_formula": "C11H8N2O"
+    },
+    {
+      "source_row_index": 246,
+      "display_id": "#0247",
+      "formula": "C6H3Br3O",
+      "target_smiles": "Oc1c(Br)cc(Br)cc1Br",
+      "teacher_smiles": "Brc1cc(C(Br)Br)co1",
+      "teacher_formula": "C5H3Br3O"
+    },
+    {
+      "source_row_index": 1628,
+      "display_id": "#1629",
+      "formula": "C12H10S",
+      "target_smiles": "c1ccc(Sc2ccccc2)cc1",
+      "teacher_smiles": "Sc1ccc(-c2ccccc2)cc1",
+      "teacher_formula": "C12H10S"
+    },
+    {
+      "source_row_index": 838,
+      "display_id": "#0839",
+      "formula": "C4H8O",
+      "target_smiles": "OCC1CC1",
+      "teacher_smiles": "CC=C(C)CO",
+      "teacher_formula": "C5H10O"
+    }
+  ],
+  "candidate_counts": {
+    "G01": 300,
+    "G02": 19
+  },
+  "rejected": {
+    "teacher_wrong": 0,
+    "s1_wrong": 0,
+    "s2_wrong": 0,
+    "missing_spectra": 0
+  }
+}
